@@ -13,7 +13,6 @@ $(".js-select-input").submit(function (event) {
         getGoogleBooksResults(userInputPlant);
         getWeatherResults(userInputState);
     }
-    //    getResults(userInput);
 });
 
 
@@ -54,7 +53,6 @@ function displayYoutubeSearchResults(videosArray) {
 
 /*Weatherbit functionality-- call through API to get JSON info*/
 function getWeatherResults(userSearchTerm) {
-    /* Update all the parameters for your API test*/
     var params = {
         key: '0047b4bcf6b34ac3b08735c1586bb5b0',
         maxResults: 15,
@@ -70,7 +68,6 @@ function getWeatherResults(userSearchTerm) {
         })
         /* if the call is successful (status 200 OK) show results */
         .done(function (result) {
-            //console.log(result);
             displayWeatherResults(result.data);
         })
         /* if the call is NOT successful show errors */
@@ -86,7 +83,6 @@ function displayWeatherResults(weatherArray) {
     var buildTheHtmlOutput = "";
 
     $.each(weatherArray, function (index, value) {
-        //  console.log(value.volumeInfo);
         buildTheHtmlOutput += "<li>";
         buildTheHtmlOutput += "<h3>Temp: " + (((value.temp * 9) / 5) + 32).toFixed(1) + " Fahrenheit</h3>";
         buildTheHtmlOutput += "<h3>Sunrise : " + value.sunrise + " GMT</h3>";
@@ -108,7 +104,6 @@ function getGoogleBooksResults(userSearchTerm) {
             q: "how to grow" + userSearchTerm,
         },
         function (receivedApiData) {
-            //console.log(receivedApiData);
             if (receivedApiData.items == 0) {
                 alert("No books found.");
             } else {
@@ -122,7 +117,6 @@ function displayGoogleBooksResults(booksArray) {
     var htmlOutput = "";
 
     $.each(booksArray, function (index, value) {
-        //  console.log(value.volumeInfo);
         htmlOutput += '<li><h3>' + value.volumeInfo.title + '</h3>';
         htmlOutput += '<p>' + value.volumeInfo.authors + '</p>';
         htmlOutput += '<a href="' + value.volumeInfo.previewLink + '" target= "blank" class="btn btn-default moreInfoButton" role="button">More Info...</a></li></li>';
