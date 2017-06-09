@@ -103,7 +103,7 @@ function displayWeatherResults(weatherArray) {
 /*google books functionality-- call through API to get JSON info*/
 function getGoogleBooksResults(userSearchTerm) {
     $.getJSON("https://www.googleapis.com/books/v1/volumes", {
-            maxResults: 9,
+            maxResults: 11,
             key: "AIzaSyCHXrCpLMW0YYC6gQeu1jPxZZDwJwPEW3c",
             q: "how to grow" + userSearchTerm,
         },

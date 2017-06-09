@@ -1,116 +1,124 @@
-    /*reset*/
+                    /*reset*/
 
-    * {
-        border: 0;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        /*delete me before delivery
-    border: 1px solid gray;*/
-    }
+                * {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
 
-    html {
-        background: rgba(0, 0, 0, 0) url("images/garden-stuff.jpeg") no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
+                html {
+                    background: rgba(0, 0, 0, 0) url("images/garden-stuff.jpeg") no-repeat center center fixed;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
+                }
 
-    body {
-        text-align: center;
-    }
+                body {
+                    text-align: center;
+                }
 
-    ul {
-        list-style: none;
-    }
+                ul {
+                    list-style: none;
+                }
 
-    header {
-        text-align: center;
-        background-color: aliceblue;
-        opacity: .75;
-        font-family: avenir;
-        font-size: 15px;
-        width: 65%;
-        border-radius: 7px;
-        margin: 1rem auto;
-        padding: 1rem .5rem;
-    }
+                header {
+                    text-align: center;
+                    background-color: aliceblue;
+                    opacity: .75;
+                    font-family: avenir;
+                    font-size: 15px;
+                    width: 65%;
+                    border-radius: 7px;
+                    margin: 1rem auto;
+                    padding: 1rem .5rem;
+                }
 
-    header h1 {
-        vertical-align: middle;
-    }
+                header h1 {
+                    vertical-align: middle;
+                }
 
-    header h1 img {
-        width: 35px;
-        margin-right: 1rem;
-    }
+                header h1 img {
+                    width: 35px;
+                    margin-right: 1rem;
+                }
 
-    section.input-form {
-        background-color: aliceblue;
-        border-radius: 7px;
-        padding-top: 1.5rem;
-        opacity: .75;
-        padding: .5rem;
-        width: 65%;
-        margin: 1rem auto;
-    }
+                section.input-form {
+                    background-color: aliceblue;
+                    border-radius: 7px;
+                    padding-top: 1.5rem;
+                    opacity: .75;
+                    padding: .5rem;
+                    width: 65%;
+                    margin: 1rem auto;
+                }
 
-    section.input-form select,
-    section.input-form button {
-        font-size: 15px;
-        font-family: avenir;
-        padding: 0.2rem 0.5rem;
-        border: 1px solid gray;
-        border-radius: 5px;
-        background-color: transparent;
-        margin: .25rem 1rem;
-    }
+                section.input-form select,
+                section.input-form button {
+                    font-size: 15px;
+                    font-family: avenir;
+                    padding: 0.2rem 0.5rem;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    margin: .25rem 1rem;
+                }
 
-    section.results {
-        display: inline-block;
-        width: 90%;
-    }
+                section.results {
+                    display: inline-block;
+                    width: 90%;
+                }
 
-    section div {
-        font-family: avenir;
-        font-size: 20px;
-        display: inline-block;
-        width: 30%;
-        background-color: rgba(240, 248, 255, .65);
-        border-radius: 7px;
-        padding: 1.5rem .5rem;
-        margin: 0 1%;
-        vertical-align: top;
-    }
+                section div {
+                    font-family: avenir;
+                    font-size: 20px;
+                    display: inline-block;
+                    width: 30%;
+                    background-color: rgba(240, 248, 255, .65);
+                    border-radius: 7px;
+                    padding: 1.5rem .5rem;
+                    margin: 0 1%;
+                    vertical-align: top;
+                }
 
-    section div ul {
-        font-family: avenir;
-        font-size: 12px;
-        padding-top: .75rem;
-    }
+                section div ul {
+                    font-family: avenir;
+                    font-size: 12px;
+                    padding-top: .75rem;
+                }
 
-    section div ul img {
-        display: inline-block;
-        width: 100%;
-        padding-bottom: .75rem;
-    }
+                section div ul img {
+                    display: inline-block;
+                    width: 90%;
+                    padding-bottom: .75rem;
+                }
 
-    @media only screen and (max-width: 768px) {
-        header,
-        section.input-form,
-        section.results {
-            width: 80%;
-            font-size: 12px
-        }
-    }
+                section div.google-books-results ul img {
+                    display: inline-block;
+                    width: 70%;
+                    padding-bottom: .75rem;
+                }
 
-    @media only screen and (max-width: 320px) {
-        header,
-        section.input-form,
-        section.results {
-            width: 80%;
-            display: block;
-            font-size: 10px;
-        }
-    }
+                @media only screen and (min-width: 1024px) {
+                    section div.google-books-results ul img {
+                        display: inline-block;
+                        width: 50%;
+                    }
+                    @media only screen and (max-width: 768px) {
+                        header,
+                        section.input-form,
+                        section.results {
+                            width: 80%;
+                            font-size: 12px
+                        }
+                    }
+                    @media only screen and (max-width: 320px) {
+                        header,
+                        section.input-form,
+                        section.results {
+                            width: 80%;
+                            display: block;
+                            font-size: 10px;
+                        }
+                    }
