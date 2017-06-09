@@ -1,8 +1,9 @@
 # Recipe Search
 Thinkful (https://thinkful.com/) First Capstone Project - a responsive website site that pulls data from a third party API, https://developer.yummly.com/, to present search results in a useful way.
 
-![Screenshot Home](https://github.com/brandylavoy/api-capstone-recipe/blob/master/gardener-assistant-homepage-no-results.png)
-![Screenshot Results](https://github.com/brandylavoy/api-capstone-recipe/blob/master/gardener-assistant-homepage-with-results.png)
+![Screenshot Home](https://github.com/jamicope/api-capstone-garden-search/blob/master/github-images/gardener-assistant-homepage-no-results.png)
+
+![Screenshot Results](https://github.com/jamicope/api-capstone-garden-search/blob/master/github-images/gardener-assistant-homepage-with-results.png)
 
 
 ## Introduction
@@ -18,7 +19,7 @@ The initial wireframes for the page and the list of results can be seen below.
 ![Results Wire Frame](https://github.com/brandylavoy/api-capstone-recipe/blob/master/api-capstone-recipe-results.JPG)
 
 ## Live Site
-You can find Recipe Finder at https://brandylavoy.github.io/api-capstone-recipe/
+You can find Recipe Finder at https://jamicope.github.io/api-capstone-garden-search/
 
 
 ## Technical
