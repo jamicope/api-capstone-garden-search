@@ -10,7 +10,7 @@ Thinkful (https://courses.thinkful.com/fewd-001v6/lesson/3.5) First Capstone Pro
 Gardener's Assistant gives users the ability to search and filter information sourced through the YouTube, Weatherbit, and Google Books APIs in order to return videos, books, and local weather to assist in gardening.
 
 ## Use Case
-The user of this app will be someone with dietary restrictions, and/or food allergies. They will be able to search an ingredient and filter recipies based on dietary restrictions, or food allergies.
+The user of this app will be someone who is looking for information on how to plant and grow produce in their state. The app will return videos and books to give the user information on the produce for which they search, as well as local weather to assist the gardener in knowing daily conditions for gardening.
 
 ## UX
 The initial wireframes for the page and the list of results can be seen below.
