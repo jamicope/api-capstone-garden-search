@@ -1,5 +1,5 @@
 # Gardener's Assistant
-Thinkful (https://courses.thinkful.com/fewd-001v6/lesson/3.5) First Capstone Project - a responsive website site that pulls data from multiple third party APIs, , to present search results in a useful way for produce gardeners.
+Thinkful (https://courses.thinkful.com/fewd-001v6/lesson/3.5) First Capstone Project - a responsive website site that pulls data from multiple third party APIs to present search results in a useful way for produce gardeners.
 
 ![Screenshot Home](https://github.com/jamicope/api-capstone-garden-search/blob/master/github-images/gardener-assistant-homepage-no-results.png)
 
