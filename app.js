@@ -82,11 +82,11 @@ function checkText(input) {
     var output = "";
     console.log("->" + input + "<-");
     if (input == "undefined") {
-        output = " unknown ";
+        output = "unknown";
     } else if (input == "0") {
-        output = " unknown ";
+        output = "unknown";
     } else if (!input) {
-        output = " unknown ";
+        output = "unknown";
     } else {
         output = input;
     }
@@ -107,6 +107,7 @@ function checkNumber(input) {
     }
     return output;
 }
+
 /*Weatherbit Return info from the JSON in appropriate containers*/
 function displayWeatherResults(weatherArray) {
     var buildTheHtmlOutput = "";
