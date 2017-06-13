@@ -41,7 +41,7 @@ function displayYoutubeSearchResults(videosArray) {
 
     $.each(videosArray, function (videosArrayKey, videosArrayValue) {
         buildTheHtmlOutput += "<li>";
-        buildTheHtmlOutput += "<p>" + videosArrayValue.snippet.title + "</p>";
+        buildTheHtmlOutput += "<p>" + checkText(videosArrayValue.snippet.title) + "</p>";
         buildTheHtmlOutput += "<a href='https://www.youtube.com/watch?v=" + videosArrayValue.id.videoId + "' target='_blank'>";
         buildTheHtmlOutput += "<img class='vid-pics' src='" + videosArrayValue.snippet.thumbnails.high.url + "'/>";
         buildTheHtmlOutput += "</a>";
@@ -78,6 +78,35 @@ function getWeatherResults(userSearchTerm) {
         });
 }
 
+function checkText(input) {
+    var output = "";
+    console.log("->" + input + "<-");
+    if (input == "undefined") {
+        output = " unknown ";
+    } else if (input == "0") {
+        output = " unknown ";
+    } else if (!input) {
+        output = " unknown ";
+    } else {
+        output = input;
+    }
+    return output;
+}
+
+function checkNumber(input) {
+    var output = "";
+    console.log("->" + input + "<-");
+    if (input == "undefined") {
+        output = 0;
+    } else if (input == "0") {
+        output = 0;
+    } else if (!input) {
+        output = 0;
+    } else {
+        output = input;
+    }
+    return output;
+}
 /*Weatherbit Return info from the JSON in appropriate containers*/
 function displayWeatherResults(weatherArray) {
     var buildTheHtmlOutput = "";
@@ -85,12 +114,13 @@ function displayWeatherResults(weatherArray) {
     $.each(weatherArray, function (index, value) {
         buildTheHtmlOutput += "<li>";
         buildTheHtmlOutput += "<h3>Temp: " + (((value.temp * 9) / 5) + 32).toFixed(1) + " Fahrenheit</h3>";
-        buildTheHtmlOutput += "<h3>Sunrise : " + value.sunrise + " GMT</h3>";
-        buildTheHtmlOutput += "<h3>Sunset: " + value.sunset + " GMT</h3>";
-        buildTheHtmlOutput += "<h3>Wind Direction: " + value.wind_cdir + "</h3>";
-        buildTheHtmlOutput += "<h3>Wind Speed: " + value.wind_spd + " MPH</h3>";
-        buildTheHtmlOutput += "<h3>Precipitation: " + value.precip + " inches</h3>";
+        buildTheHtmlOutput += "<h3>Sunrise : " + checkText(value.sunrise) + " GMT</h3>";
+        buildTheHtmlOutput += "<h3>Sunset: " + checkText(value.sunset) + " GMT</h3>";
+        buildTheHtmlOutput += "<h3>Wind Direction: " + checkText(value.wind_cdir) + "</h3>";
+        buildTheHtmlOutput += "<h3>Wind Speed: " + checkNumber(value.wind_spd) + " MPH</h3>";
+        buildTheHtmlOutput += "<h3>Precipitation: " + checkNumber(value.precip) + " inches</h3>";
         buildTheHtmlOutput += "</li>";
+
     });
 
     $(".weather-results ul").html(buildTheHtmlOutput);
@@ -112,13 +142,14 @@ function getGoogleBooksResults(userSearchTerm) {
         });
 }
 
+
 /*Google Books Return info from the JSON in appropriate containers*/
 function displayGoogleBooksResults(booksArray) {
     var htmlOutput = "";
 
     $.each(booksArray, function (index, value) {
-        htmlOutput += '<li><h3>' + value.volumeInfo.title + '</h3>';
-        htmlOutput += '<p>' + value.volumeInfo.authors + '</p>';
+        htmlOutput += '<li><h3>' + checkText(value.volumeInfo.title) + '</h3>';
+        htmlOutput += '<p>' + checkText(value.volumeInfo.authors) + '</p>';
         htmlOutput += '<a href="' + value.volumeInfo.previewLink + '" target= "blank" class="btn btn-default moreInfoButton" role="button">More Info...</a></li></li>';
         htmlOutput += '<li>';
         if (value.volumeInfo.imageLinks) {
