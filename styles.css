@@ -24,7 +24,7 @@ ul {
 header,
 section.input-form,
 section.results {
-    width: 80%;
+    width: 100%;
     margin: 1rem auto;
     font-size: 18px;
 }
@@ -33,9 +33,9 @@ header {
     text-align: center;
     background-color: cornsilk;
     opacity: .75;
+    width: 65%;
     font-family: avenir;
     font-size: 20px;
-    width: 65%;
     border-radius: 7px;
     margin: 1rem auto;
     padding: 1rem 1rem;
@@ -136,7 +136,6 @@ section div.google-books-results ul img {
     }
     section.input-form {
         display: block;
-        width: 80%;
     }
 }
 
